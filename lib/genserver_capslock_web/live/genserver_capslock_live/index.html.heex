@@ -1,0 +1,16 @@
+<div phx-hook="CapsLock" id="caps-lock">
+  <div class="w-full flex justify-center">
+    <div class="w-full md:w-full lg:w-1/3">
+      <textarea
+        placeholder="Type here..."
+        id="textarea"
+        phx-hook="TextareaListener"
+        class="w-full p-3 border rounded-lg shadow-sm outline-none min-h-[200px] resize-y"
+      ></textarea>
+      <div data-capslock="yes" class="capslock">
+        <p>Is capslock on? <span id="caps-status">No</span></p>
+        <p>There are <span id="user-count">0</span> users online.</p>
+      </div>
+    </div>
+  </div>
+</div>
