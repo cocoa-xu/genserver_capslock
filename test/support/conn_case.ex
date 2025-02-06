@@ -20,6 +20,7 @@ defmodule GenserverCapslockWeb.ConnCase do
   using do
     quote do
       use GenserverCapslockWeb, :verified_routes
+
       import GenserverCapslockWeb.ConnCase
       import Phoenix.ConnTest
       import Plug.Conn
