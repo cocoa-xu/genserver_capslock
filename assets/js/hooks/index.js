@@ -7,19 +7,20 @@ let Hooks = {
     mounted() {
       window.addEventListener('keydown', e => {
         if (e.key === "CapsLock") {
-          const capsLockOn = e.getModifierState('CapsLock');
-          this.pushEvent("capslock_change", { on: capsLockOn })
+          this.pushEvent("capslock_change", {})
         }
       })
   
       this.handleEvent("capslock_change", ({capslock}) => {
         SharedState.capsLockOn = capslock
         if (capslock) {
+          document.title = "GENSERVER CAPSLOCK"
           document.getElementById("caps-status").innerText = "Yes";
           document.querySelectorAll('[data-capslock="yes"]').forEach(el => {
             el.classList.add("capslock")
           })
         } else {
+          document.title = "GenServer Capslock"
           document.getElementById("caps-status").innerText = "No";
           document.querySelectorAll('[data-capslock="yes"]').forEach(el => {
             el.classList.remove("capslock")

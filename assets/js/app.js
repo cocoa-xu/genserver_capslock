@@ -20,11 +20,8 @@ import "phoenix_html"
 // Establish Phoenix Socket and LiveView configuration.
 import {Socket} from "phoenix"
 import {LiveSocket} from "phoenix_live_view"
-import {createLiveToastHook} from "live_toast"
 import topbar from "../vendor/topbar"
 import hooks from "./hooks"
-
-hooks.LiveToast = createLiveToastHook(2000)
 
 let csrfToken = document.querySelector("meta[name='csrf-token']").getAttribute("content")
 let liveSocket = new LiveSocket("/live", Socket, {

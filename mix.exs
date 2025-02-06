@@ -41,7 +41,6 @@ defmodule GenserverCapslock.MixProject do
       {:heroicons,
        github: "tailwindlabs/heroicons", tag: "v2.1.1", sparse: "optimized", app: false, compile: false, depth: 1},
       {:jason, "~> 1.2"},
-      {:live_toast, "0.6.4"},
       {:phoenix, "~> 1.7.19"},
       {:phoenix_ecto, "~> 4.5"},
       {:phoenix_html, "~> 4.1"},
